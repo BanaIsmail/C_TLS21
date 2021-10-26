@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string pilih;
+    int biayaMakan,biayaKos,biayaTransport, budget, totalBiaya;
+    cout<<"Perkiraan Biaya Hidup Anak Kos\n";
+    cout<<"Masukkan Kota Tujuan Kuliah (Yogyakarta/Bandung):";
+    cin>>pilih;
+    cout<<"Masukkan Jumlah Budget Yang Anda Miliki : ";
+    cin>>budget;
+    
+    if (pilih == "Yogyakarta"){
+        biayaMakan = 10000*3*30;
+        biayaKos =800000;
+        biayaTransport=10000*20;
+        }
+    else if (pilih == "Bandung"){
+        biayaMakan = 13000*3*30;
+        biayaKos =1000000;
+        biayaTransport=13000*20;
+        }
+    else{
+        cout<<"Kota Tujuan Tidak Sesuai";
+        }
+        
+    totalBiaya = biayaMakan+biayaKos+biayaTransport;
+    
+    cout<<"Biaya Makan anda sebesar\t"<<biayaMakan<<"\n";
+    cout<<"Biaya Kost anda sebesar\t\t"<<biayaKos<<"\n";
+    cout<<"Biaya Transport anda sebesar\t"<<biayaTransport<<"\n";
+    cout<<"=================================\n";
+    cout<<"Biaya Total anda Sebesar\t"<<totalBiaya<<"\n";
+    
+    {   if (budget>totalBiaya){
+         cout<<"Anda Masih Memiliki Sisa Uang Sebesar Rp."<< budget - totalBiaya <<"Untuk Tinggal Di Kota Tujuan Anda";
+         }
+        else if (totalBiaya>budget){
+         cout<<"Anda Membutuhkan Uang Sebesar Rp."<< totalBiaya - budget <<"Untuk Tinggal Di Kota Tujuan Anda";
+        }
+    }
+    return (0);
+    
+    
+}
+            
